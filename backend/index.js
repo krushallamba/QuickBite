@@ -1,8 +1,11 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const port = process.env.PORT || 5000
 const mongoDB = require('./db')
 mongoDB()
+
+app.use(cors())
 
 app.use((req,res,next)=>{
   res.setHeader("Access-Control-Allow-Origin", "https://quickbite-7.onrender.com")
