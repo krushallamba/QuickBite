@@ -9,7 +9,7 @@ function Login() {
   
     const handleSubmit = async(e)=>{
         e.preventDefault()
-        const response = await fetch(`${window.location.origin}/api/loginuser`,{
+        const response = await fetch(`https://quickbite-3.onrender.com/api/loginuser`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
