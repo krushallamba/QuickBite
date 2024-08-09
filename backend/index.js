@@ -20,6 +20,12 @@ app.use('/api', require('./Routes/OrderData'))
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
+app.use('/proxy', (req, res) => {
+  const url = 'https://quickbite-3.onrender.com' + req.url;
+  req.pipe(request(url)).pipe(res);
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

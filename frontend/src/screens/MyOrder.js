@@ -7,7 +7,7 @@ function MyOrder() {
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
-        await fetch(`https://quickbite-3.onrender.com/api/myOrderData`, {
+        await fetch(`https://quickbite-3.onrender.com/proxy/api/myOrderData`, {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
             method: 'POST',
