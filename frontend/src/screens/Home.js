@@ -9,7 +9,7 @@ function Home() {
   const [foodCat, setfoodCat] = useState([])
   const [foodItem, setfoodItem] = useState([]);
   const loadData = async ()=>{
-    let response = await fetch(`https://quickbite-3.onrender.com/proxy/api/foodData`, {
+    let response = await fetch(`https://quickbite-3.onrender.com/api/foodData`, {
       method:"POST",
       headers:{
         'Content-Type':'application/json'
